@@ -31,4 +31,4 @@ def extract_lat_long_via_address(name, address_or_zipcode):
     print(p_lat, p_lng)
 
 
-extract_lat_long_via_address('Atterbury Bird & Animal Hospital', '494 Atterbury Road, Menlo Park, 0081')
+extract_lat_long_via_address('Atterbury Bird & Animal Hospital', ' Atterbury Road, Menlo Park, 0081')
