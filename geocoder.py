@@ -4,7 +4,7 @@ import time
 
 def extract_cords(contact, address, name):
     var_dict = {'contact': contact, 'address': address, 'name': name}
-    key = 'YOUR_PLACE_API_KEY'
+    key = 'AIzaSyCEVftlo0qT468oe778T91KgHI-lAkt1pQ'
     base_url = "https://maps.googleapis.com/maps/api/"
     place_url = f"place/textsearch/json?query={contact or name}&key={key}&region=ZA"
     geocode_url = f"geocode/json?address={address}&key={key}&region=ZA"
@@ -12,7 +12,7 @@ def extract_cords(contact, address, name):
 
     for item, value in var_dict.items():
         current_delay = 0.1
-        max_delay = 600
+        max_delay = 300
         if item == 'contact' and item is not None or item == 'name':
             url = base_url + place_url
         else:
@@ -52,3 +52,6 @@ def extract_cords(contact, address, name):
             time.sleep(current_delay)
             current_delay *= 2
     return cords_list
+
+
+extract_cords('021 534 6426', '90 Bofors Circle, Epping, Cape Town', 'AACL Animal Hospital, Cape Town')
