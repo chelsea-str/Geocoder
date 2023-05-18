@@ -4,7 +4,7 @@ import time
 
 def extract_cords(contact, address, name):
     var_dict = {'contact': contact, 'address': address, 'name': name}
-    key = 'AIzaSyCEVftlo0qT468oe778T91KgHI-lAkt1pQ'
+    key = '[API key]'
     base_url = "https://maps.googleapis.com/maps/api/"
     place_url = f"place/textsearch/json?query={contact or name}&key={key}&region=ZA"
     geocode_url = f"geocode/json?address={address}&key={key}&region=ZA"
